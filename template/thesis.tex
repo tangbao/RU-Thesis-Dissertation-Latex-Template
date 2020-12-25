@@ -1,0 +1,51 @@
+
+\documentclass[12pt]{rutgersthesis}
+
+% preamble
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Your information here
+% !IMPORTANT!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\thesisType}{Dissertation } % Dissertation for PhD and Thesis for Master
+\newcommand{\thesisTitle}{Title} % your thesis/dissertation title, e.g., How to Write A Thesis
+\newcommand{\yourName}{Name} % your name, e.g., Tim Cook
+\newcommand{\yourDegree}{Doctor of Philosophy} % your degree to be obtained, e.g., Master of Science, Doctor of Philosophy
+\newcommand{\yourProgram}{Graduate Program} %insert your graduate program’s official name
+\newcommand{\yourDirectorTitle}{Prof.} % the title of your thesis director
+\newcommand{\yourDirector}{Dissertation/Thesis Director} % your thesis director name here, his/her title not included
+\newcommand{\yourCommitteeNumber}{4} % IMPORTANT! the number of the committee members for your defense
+\newcommand{\yourMonth}{Month} % your graduation month, not your defense month
+\newcommand{\yourYear}{Year} % your graduation year
+
+
+\bibliography{references}
+
+% document body
+\begin{document}
+% \doublespacing  %set line spacing
+
+\input{copyright}
+
+\makeTitlePage{Month}{Year}
+
+\begin{frontmatter}
+    \input{abstract}
+    \input{acknowledgments}
+    \makeTOC
+    \makeListOfTables
+    \makeListOfFigures
+    \input{abbrevs}
+\end{frontmatter}
+
+\begin{thesisbody}
+    \input{chapters/chapter1}
+    \input{chapters/chapter2}
+    % \input{chapters/chapter3}
+    % \input{chapters/chapter4}
+    % \input{chapters/chapter5.tex}
+    % \input{chapters/appendix.tex}
+    \makeBibliography
+\end{thesisbody}
+
+\end{document}
