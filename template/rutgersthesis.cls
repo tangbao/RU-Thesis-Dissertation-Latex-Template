@@ -273,23 +273,23 @@ Date approved: \@approvaldate
 
 % ------------------ Epigraph ------------------
 \newcommand{\makeEpigraph}[2]{
-\clearpage
-\begin{center}
-\vspace*{\fill}
-#1\\
-\textit{#2}
-\vspace*{\fill}
-\end{center}
+    \clearpage
+    \begin{center}
+        \vspace*{\fill}
+        #1\\
+        \textit{#2}
+        \vspace*{\fill}
+    \end{center}
 }
 
 % ------------------ Dedication ------------------
 \newcommand{\makeDedication}[1]{
-\clearpage
-\begin{center}
-\vspace*{\fill}
-#1\\
-\vspace*{\fill}
-\end{center}
+    \clearpage
+    \begin{center}
+        \vspace*{\fill}
+        #1\\
+        \vspace*{\fill}
+    \end{center}
 }
 
 % ------------------ Acknowledgments environment/formatting ------------------
@@ -299,8 +299,8 @@ Date approved: \@approvaldate
     \phantomsection
     \addcontentsline{toc}{chapter}{Acknowledgments}
     \begin{centering}
-    \textbf{ACKNOWLEDGMENTS}\\
-    \vspace{\baselineskip}
+        \textbf{ACKNOWLEDGMENTS}\\
+        \vspace{\baselineskip}
     \end{centering}
 }
 {
@@ -323,41 +323,41 @@ Date approved: \@approvaldate
     \currentpdfbookmark{Table of Contents}{TOC}
     \renewcommand\contentsname{Table of Contents}
     \begin{singlespace}
-    \tableofcontents
+        \tableofcontents
     \end{singlespace}
     \clearpage
 }
 
 % ------------------ List of Tables ------------------
 \newcommand{\makeListOfTables}{
-\phantomsection
-\addcontentsline{toc}{chapter}{List of Tables}
-\begin{singlespace}
-\setlength\cftbeforetabskip{\baselineskip}  % manually set spacing between entries
-\listoftables
-\end{singlespace}
-\clearpage
+    \phantomsection
+    \addcontentsline{toc}{chapter}{List of Tables}
+    \begin{singlespace}
+        \setlength\cftbeforetabskip{\baselineskip}  % manually set spacing between entries
+        \listoftables
+    \end{singlespace}
+    \clearpage
 }
 
 % ------------------ List of Figures ------------------
 \newcommand{\makeListOfFigures}{
-\phantomsection
-\addcontentsline{toc}{chapter}{List of Figures}
-\begin{singlespace}
-\setlength\cftbeforefigskip{\baselineskip}  % manually set spacing between entries
-\listoffigures
-\end{singlespace}
-\clearpage
+    \phantomsection
+    \addcontentsline{toc}{chapter}{List of Figures}
+    \begin{singlespace}
+        \setlength\cftbeforefigskip{\baselineskip}  % manually set spacing between entries
+        \listoffigures
+    \end{singlespace}
+    \clearpage
 }
 
 % ------------------ List of Acronyms ------------------
 \newcommand{\makeListOfAcronyms}{
-\phantomsection
-\singlespacing
-\addcontentsline{toc}{chapter}{List of Acronyms}
-\printacronyms[nonumberlist,title={List of Acronyms}]
-\clearpage
-\doublespacing
+    \phantomsection
+    \singlespacing
+    \addcontentsline{toc}{chapter}{List of Acronyms}
+    \printacronyms[nonumberlist,title={List of Acronyms}]
+    \clearpage
+    \doublespacing
 }
 
 % ------------------ abstract environment definition ------------------
@@ -368,16 +368,16 @@ Date approved: \@approvaldate
     \begin{centering}
     ABSTRACT OF THE \MakeUppercase{\thesisType}\\
 
-\vspace{\baselineskip}
-\textbf{\thesisTitle}\\
-\vspace{\baselineskip}
-by \textbf{\yourName}\\
-\vspace{\baselineskip}
-{\thesisType} Director: {\yourDirectorTitle} {\yourDirector}\\
-\vspace{2\baselineskip}
-    \end{centering}
+    \vspace{\baselineskip}
+    \textbf{\thesisTitle}\\
+    \vspace{\baselineskip}
+    by \textbf{\yourName}\\
+    \vspace{\baselineskip}
+    {\thesisType} Director: {\yourDirectorTitle} {\yourDirector}\\
+    \vspace{2\baselineskip}
+        \end{centering}
 }{
-\clearpage
+    \clearpage
 }
 
 % ------------------ appendix environment definition ------------------
