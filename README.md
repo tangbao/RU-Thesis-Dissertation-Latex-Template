@@ -18,13 +18,13 @@ You can check the generated [example pdf file](RutgersDissertationTemplate.pdf) 
 
 This template is tested on [Overleaf](https://overleaf.com). If you are using other Latex editors, please see [Known Issues](#known-issues).
 
-You can download the latest stable version of this template from [releases](/releases). If you are using Overleaf, please log into your account first, then click New Project - Upload Project - Select/drag a .zip file, and upload the file you downloaded, to start your excellent work. If you are using other Latex editors, the template folder should be your project's root folder.
+You can download the latest stable version of this template from [releases](https://github.com/tangbao/RU-Thesis-Dissertation-Latex-Template/releases/). If you are using Overleaf, please log into your account first, then click New Project - Upload Project - Select/drag a .zip file, and upload the file you downloaded, to start your excellent work. If you are using other Latex editors, the template folder should be your project's root folder.
 
 You can also clone this repo and use the files under [template](/template) folder to try the latest (but in development) version.
 
 ## Known Issues
 
-- [#2](/issues/2), it is found that when using a local editor like TeXLive 2020 + VS Code + Latex Workshop, you might not be able to generate the List of Abbreviations page (Page vii). It will be blank except the page number "vii". This could be caused by different implementations of Latex. Some users may also meet this problem if their template files (*.tex/*.bib/*.cls, etc.) are in a subfolder. To solve this problem, please move all the template files to the root folder.
+- [#2](https://github.com/tangbao/RU-Thesis-Dissertation-Latex-Template/issues/2), it is found that when using a local editor like TeXLive 2020 + VS Code + Latex Workshop, you might not be able to generate the List of Abbreviations page (Page vii). It will be blank except the page number "vii". This could be caused by different implementations of Latex. Some users may also meet this problem if their template files (*.tex/*.bib/*.cls, etc.) are in a subfolder. To solve this problem, please move all the template files to the root folder.
 
 ## Make Contributions / Report Bugs
 
