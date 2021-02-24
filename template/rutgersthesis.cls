@@ -31,6 +31,7 @@
 \RequirePackage{subcaption} % allows subfigures in a reasonable way, plays nice with caption
 \RequirePackage[acronym,nogroupskip,nopostdot]{glossaries} % only for list of acronyms
 \RequirePackage{doi} % and this is laster, makes easier hyperlinking for doi sources
+\RequirePackage{nameref}
 
 \sisetup{
     sticky-per=true,
@@ -190,7 +191,8 @@ Graduate Program in {\yourProgram}\\
 \vspace{2\baselineskip}
 Written under the direction of\\
 \vspace{\baselineskip}
-\yourDirector\\
+{\yourDirectorTitle}
+{\yourDirector}\\
 \vspace{\baselineskip}
 And approved by\\
 \vspace{2\baselineskip}
@@ -449,10 +451,11 @@ Date approved: \@approvaldate
     \end{singlespace}
 }
 
-% ------------------ vita environment ------------------
-\newenvironment{vita}{
+% ------------------ publication environment ------------------
+\newenvironment{publications}{
     \bookmarksetupnext{level=part}
-    \chapter*{Vita}
-    \addcontentsline{toc}{chapter}{Vita}
+    \chapter*{Acknowledgment of Previous Publications}
+    \addcontentsline{toc}{chapter}{Acknowledgment of Previous Publications}
+    \setlength{\parskip}{1em}
 }{
 }
