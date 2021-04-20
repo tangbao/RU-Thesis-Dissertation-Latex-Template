@@ -169,11 +169,11 @@
 
 \begin{singlespacing}
 
-\textbf{\MakeUppercase{\thesisTitle}}\\
+\MakeUppercase{\thesisTitle}\\
 \vspace{\baselineskip}
 By\\
 \vspace{\baselineskip}
-\textbf{\MakeUppercase{\yourName}}\\
+\MakeUppercase{\yourName}\\
 \vspace{\baselineskip}
 A \MakeLowercase{{\thesisType}}submitted to the\\
 \vspace{\baselineskip}
@@ -240,7 +240,7 @@ New Brunswick, New Jersey\\
 \columnsep=30pt
 \begin{singlespacing}
 \begin{center}
-\textbf{\MakeUppercase{\@title}}\\
+\MakeUppercase{\@title}\\
 \end{center}
 \vfill
 % minipages depending on number of committee members
@@ -371,9 +371,9 @@ Date approved: \@approvaldate
     ABSTRACT OF THE \MakeUppercase{\thesisType}\\
 
 \vspace{\baselineskip}
-\textbf{\thesisTitle}\\
+\thesisTitle\\
 \vspace{\baselineskip}
-by \textbf{\yourName}\\
+by \MakeUppercase{\yourName}\\
 \vspace{\baselineskip}
 {\thesisType} Director: {\yourDirectorTitle} {\yourDirector}\\
 \vspace{2\baselineskip}
