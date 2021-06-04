@@ -111,7 +111,7 @@
 % thesisbody environment, handles text and other formatting 
 \newenvironment{thesisbody}{%
     \clearpage
-    \pagestyle{plain}
+    \pagestyle{myheadings}
     \pagenumbering{arabic} % resumes page numbering after front matter
     \setcounter{page}{1} % set the page number appropriately
     \titleformat{\chapter}[display]{\normalfont\bfseries\filcenter}{\MakeUppercase\chaptertitlename\ \thechapter}{0pt}{\MakeUppercase{##1}}  % spacing between titles
@@ -191,7 +191,6 @@ Graduate Program in {\yourProgram}\\
 \vspace{2\baselineskip}
 Written under the direction of\\
 \vspace{\baselineskip}
-{\yourDirectorTitle}
 {\yourDirector}\\
 \vspace{\baselineskip}
 And approved by\\
@@ -375,7 +374,7 @@ Date approved: \@approvaldate
 \vspace{\baselineskip}
 by \MakeUppercase{\yourName}\\
 \vspace{\baselineskip}
-{\thesisType} Director: {\yourDirectorTitle} {\yourDirector}\\
+{\thesisType} Director: {\yourDirector}\\
 \vspace{2\baselineskip}
     \end{centering}
 }{
