@@ -32,6 +32,8 @@
 \RequirePackage[acronym,nogroupskip,nopostdot]{glossaries} % only for list of acronyms
 \RequirePackage{doi} % and this is laster, makes easier hyperlinking for doi sources
 \RequirePackage{nameref}
+\RequirePackage{cleveref}
+\RequirePackage{enumitem}
 
 \sisetup{
     sticky-per=true,

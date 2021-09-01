@@ -1,10 +1,12 @@
 \begin{publications}
 \thispagestyle{myheadings}
 
-\begin{description}
-\item[\label{pubs:p1}{P1}] Publication 1.
-\item[\label{pubs:p2}{P2}] Publication 2.
-\item[\label{pubs:p3}{P3}] Publication 3.
-\end{description}
+%% Please use \labelcref instead of \ref when refer to your publications!
+
+\begin{enumerate}[leftmargin=*,start=1,label=\textbf{P\arabic*}, ref={P\arabic*}]
+    \item \label{pubs:P1} Publication 1.
+    \item \label{pubs:P2} Publication 2.
+    \item \label{pubs:P3} Publication 3.
+\end{enumerate}
 
 \end{publications}
