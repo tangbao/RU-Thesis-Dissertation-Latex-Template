@@ -174,9 +174,9 @@
                 \vspace{\baselineskip}
                 By\\
                 \vspace{\baselineskip}
-                \MakeUppercase{\yourName}\\
-                \vspace{\baselineskip}
-                A \MakeLowercase{{\thesisType}}submitted to the\\
+                \MakeUppercase{\large \yourName}\\
+                \vspace{2\baselineskip}
+                A \MakeLowercase{{\thesisType}} submitted to the\\
                 \vspace{\baselineskip}
                 School of Graduate Studies\\
                 \vspace{\baselineskip}
