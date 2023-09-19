@@ -1,12 +1,12 @@
-# Rutgers Thesis / Dissertation Latex Template
+# Rutgers Thesis / Dissertation LaTeX Template
 
-A latex template for Rutgers MS Thesis or Ph.D. Dissertation.
+A LaTeX template for Rutgers MS Thesis or Ph.D. Dissertation.
 
 ## Introduction
 
-This latex template is based on the examples provided on 
+This LaTeX template is based on the examples provided on 
  - the official [Electronic Thesis and Dissertation Style Guide](https://gsnb.rutgers.edu/academics/electronic-thesis-and-dissertation-style-guide) (See [Official Examples](/OfficialExamples) to find the snapshot of the guidance and original pdf examples, downloaded on December 2020) 
- - the latex template from [Georgia Tech Thesis Templates](http://grad.gatech.edu/theses-dissertations-templates)
+ - the LaTeX template from [Georgia Tech Thesis Templates](http://grad.gatech.edu/theses-dissertations-templates)
 
 You can check the generated [example pdf file](RutgersDissertationTemplate.pdf) of the template.
 
@@ -16,15 +16,15 @@ You can check the generated [example pdf file](RutgersDissertationTemplate.pdf) 
 
 **!!! READ THE COMMENTS CAREFULLY IN TEMPLATES !!!**
 
-This template is tested on [Overleaf](https://overleaf.com). If you are using other Latex editors, please see [Known Issues](#known-issues).
+You can find the latest stable version of this template from [releases](https://github.com/tangbao/RU-Thesis-Dissertation-Latex-Template/releases/). The latest dev version of this template is available by cloning this repo or clicking Code - Download ZIP on GitHub.
 
-You can download the latest stable version of this template from [releases](https://github.com/tangbao/RU-Thesis-Dissertation-Latex-Template/releases/). If you are using Overleaf, please log into your account first, then click New Project - Upload Project - Select/drag a .zip file, and upload the file you downloaded, to start your excellent work. If you are using other Latex editors, the template folder should be your project's root folder.
+This template is tested on [Overleaf](https://overleaf.com). There might be issues if you are using local LaTex editors (see [#2](https://github.com/tangbao/RU-Thesis-Dissertation-Latex-Template/issues/2)).
 
-You can also clone this repo and use the files under [template](/template) folder to try the latest (but in development) version.
+To start on Overleaf, please log into your account first, then click New Project - Upload Project - Select/drag a .zip file, and upload the .zip file you downloaded, to start your excellent work. 
 
-## Known Issues
+To start locally, simply clone this repo or extract the .zip file you get, and use your LaTeX editor to start the project.
 
-- [#2](https://github.com/tangbao/RU-Thesis-Dissertation-Latex-Template/issues/2), it is found that when using a local editor like TeXLive 2020 + VS Code + Latex Workshop, you might not be able to generate the List of Abbreviations page (Page vii). It will be blank except the page number "vii". This could be caused by different implementations of Latex. Some users may also meet this problem if their template files (*.tex/*.bib/*.cls, etc.) are in a subfolder. To solve this problem, please move all the template files to the root folder.
+The main LaTeX file is `thesis.tex`.
 
 ## Make Contributions / Report Bugs
 
