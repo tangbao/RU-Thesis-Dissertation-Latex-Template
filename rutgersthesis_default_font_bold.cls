@@ -15,7 +15,6 @@
 \RequirePackage[letterpaper, left=1.5in, right=1in, top=1in, bottom=1in]{geometry}
 \RequirePackage{multicol} % for multicolumn environments
 \RequirePackage{setspace}  % use this package to set linespacing as desired
-\RequirePackage{times} % use times new roman font
 \RequirePackage[explicit]{titlesec}  % title control and formatting
 \RequirePackage[titles]{tocloft}  % table of contents control and formatting
 \RequirePackage{ifoddpage} % logical page parity checking, used with rotating
@@ -52,7 +51,7 @@
 \hypersetup{
     colorlinks,
     linkcolor={black},
-    citecolor={black}, 
+    citecolor={black},
     urlcolor={black}
 }
 
@@ -62,13 +61,13 @@
 \bookmarksetup{%
     depth=1, % bookmark depth - 1 goes to section depth, 2 to subsection, etc.
     addtohook={%
-    \ifnum 0=\bookmarkget{level}\relax
-      \renewcommand*{\numberline}[1]{#1 | }%
-    \fi
-    \ifnum 0<\bookmarkget{level}\relax
-      \renewcommand*{\numberline}[1]{}%
-    \fi
-    }
+            \ifnum 0=\bookmarkget{level}\relax
+                \renewcommand*{\numberline}[1]{#1 | }%
+            \fi
+            \ifnum 0<\bookmarkget{level}\relax
+                \renewcommand*{\numberline}[1]{}%
+            \fi
+        }
 }
 
 % so that using ref with algorithms works correctly
@@ -83,13 +82,13 @@
         \else
             \clearpage\pagebreak[4]\global\pdfpageattr\expandafter{\the\pdfpageattr/Rotate 90}%
         \fi
-        }%
-        {\clearpage\pagebreak[4]\global\pdfpageattr\expandafter{\the\pdfpageattr/Rotate 0}}%
-    }{
+    }%
+    {\clearpage\pagebreak[4]\global\pdfpageattr\expandafter{\the\pdfpageattr/Rotate 0}}%
+}{
     \newenvironment{rotatepage}%
-        {\clearpage\pagebreak[4]\global\pdfpageattr\expandafter{\the\pdfpageattr/Rotate 90}}%
-        {\clearpage\pagebreak[4]\global\pdfpageattr\expandafter{\the\pdfpageattr/Rotate 0}}%
-    }
+    {\clearpage\pagebreak[4]\global\pdfpageattr\expandafter{\the\pdfpageattr/Rotate 90}}%
+    {\clearpage\pagebreak[4]\global\pdfpageattr\expandafter{\the\pdfpageattr/Rotate 0}}%
+}
 
 % tokens for author info
 \newcommand{\approvaldate}[1]{\gdef\@approvaldate{#1}}%
@@ -116,10 +115,10 @@
     \pagestyle{myheadings}
     \pagenumbering{arabic} % resumes page numbering after front matter
     \setcounter{page}{1} % set the page number appropriately
-    \titleformat{\chapter}[display]{\normalfont\bfseries\filcenter}{\MakeUppercase\chaptertitlename\ \thechapter}{0pt}{\MakeUppercase{##1}}  % spacing between titles
+    \titleformat{\chapter}[display]{\normalfont\bfseries\filcenter}{\Large \chaptertitlename\ \thechapter}{0pt}{{\Large ##1}}  % spacing between titles
     \titlespacing*{\chapter}
-      {0pt}{0pt}{30pt}	% controls vertical margins on title
-    \titleformat{\section}{\normalfont\bfseries}{\thesection}{1em}{##1}
+    {0pt}{0pt}{30pt}	% controls vertical margins on title
+    \titleformat{\section}{\normalfont\bfseries}{\large \thesection}{1em}{\large ##1}
     \titleformat{\subsection}{\normalfont}{\uline{\thesubsection}}{0em}{\uline{\hspace{1em}##1}}
     \titleformat{\subsubsection}{\normalfont\itshape}{\thesubsection}{1em}{##1}
 }%
@@ -169,48 +168,48 @@
     \phantomsection
     \begin{center}
 
-\begin{singlespacing}
+        \begin{singlespacing}
+            {\bf
+                \MakeUppercase{{\Large \thesisTitle}}\\
+                \vspace{\baselineskip}
+                By\\
+                \vspace{\baselineskip}
+                \MakeUppercase{\large \yourName}\\
+                \vspace{2\baselineskip}
+                A \MakeLowercase{{\thesisType}} submitted to the\\
+                \vspace{\baselineskip}
+                School of Graduate Studies\\
+                \vspace{\baselineskip}
+                Rutgers, The State University of New Jersey\\
+                \vspace{\baselineskip}
+                In partial fulfillment of the requirements\\
+                \vspace{\baselineskip}
+                For the degree of\\
+                \vspace{\baselineskip}
+                \yourDegree\\
+                \vspace{\baselineskip}
+                Graduate Program in {\yourProgram}\\
+                \vspace{2\baselineskip}
+                Written under the direction of\\
+                \vspace{\baselineskip}
+                {\yourDirector}\\
+                \vspace{\baselineskip}
+                And approved by}\\
+            \vspace{2\baselineskip}
+            \newcounter{ct}
+            \setcounter{ct}{0}
+            \whiledo {\value{ct} < \yourCommitteeNumber}
+            {
+                \underline{\hbox to 8cm{}}\\
+                \vspace{\baselineskip}
+                \stepcounter {ct}
+            }
+            \vfill
+            {\bf New Brunswick, New Jersey\\
+                \yourMonth{} \yourYear{}}
+        \end{singlespacing}
 
-\MakeUppercase{\thesisTitle}\\
-\vspace{\baselineskip}
-By\\
-\vspace{\baselineskip}
-\MakeUppercase{\yourName}\\
-\vspace{\baselineskip}
-A \MakeLowercase{{\thesisType}}submitted to the\\
-\vspace{\baselineskip}
-School of Graduate Studies\\
-\vspace{\baselineskip}
-Rutgers, The State University of New Jersey\\
-\vspace{\baselineskip}
-In partial fulfillment of the requirements\\
-\vspace{\baselineskip}
-For the degree of\\
-\vspace{\baselineskip}
-\yourDegree\\
-\vspace{\baselineskip}
-Graduate Program in {\yourProgram}\\
-\vspace{2\baselineskip}
-Written under the direction of\\
-\vspace{\baselineskip}
-{\yourDirector}\\
-\vspace{\baselineskip}
-And approved by\\
-\vspace{2\baselineskip}
-\newcounter{ct}
-\setcounter{ct}{0}
-\whiledo {\value{ct} < \yourCommitteeNumber}
-{
-    \underline{\hbox to 8cm{}}\\
-    \vspace{\baselineskip}
-    \stepcounter {ct}
-}
-\vfill
-New Brunswick, New Jersey\\
-\yourMonth{} \yourYear{}
-\end{singlespacing}
-
-\end{center}
+    \end{center}
 }
 
 % ------------------ approval page environment/formatting ------------------
@@ -220,49 +219,49 @@ New Brunswick, New Jersey\\
 \let\multicolmulticols\multicols
 \let\endmulticolmulticols\endmulticols
 \RenewDocumentEnvironment{multicols}{mO{}}
- {%
-  \ifnum#1=1
-    #2%
-  \else % More than 1 column
-    \multicolmulticols{#1}[#2]
-  \fi
- }
- {%
-  \ifnum#1=1
-  \else % More than 1 column
-    \endmulticolmulticols
-  \fi
- }
- % ------ end little trick ------
+{%
+    \ifnum#1=1
+        #2%
+    \else % More than 1 column
+        \multicolmulticols{#1}[#2]
+    \fi
+}
+{%
+    \ifnum#1=1
+    \else % More than 1 column
+        \endmulticolmulticols
+    \fi
+}
+% ------ end little trick ------
 
 \newenvironment{approvalPage}[1]%
 {%
-\clearpage
-\columnsep=30pt
-\begin{singlespacing}
-\begin{center}
-\MakeUppercase{\@title}\\
-\end{center}
-\vfill
-% minipages depending on number of committee members
-\ifnum#1>3
+    \clearpage
+    \columnsep=30pt
+    \begin{singlespacing}
+    \begin{center}
+        \MakeUppercase{\@title}\\
+    \end{center}
+    \vfill
+    % minipages depending on number of committee members
+    \ifnum#1>3
     \begin{minipage}[b]{\textwidth}
     Thesis committee: \\
     \begin{multicols}{2}
-\else
+    \else
     \hspace{0.5\textwidth}
     \begin{minipage}[b]{0.5\textwidth}
-    Thesis committee: \\
-    \begin{multicols}{1}
-\fi
-}%
-{%
-\end{multicols}
-\end{minipage}
-\begin{flushright}
-Date approved: \@approvaldate
-\end{flushright}
-\end{singlespacing}
+        Thesis committee: \\
+        \begin{multicols}{1}
+            \fi
+            }%
+            {%
+        \end{multicols}
+    \end{minipage}
+    \begin{flushright}
+        Date approved: \@approvaldate
+    \end{flushright}
+    \end{singlespacing}
 }
 
 \newcommand{\committeeMember}[3]{
@@ -276,23 +275,23 @@ Date approved: \@approvaldate
 
 % ------------------ Epigraph ------------------
 \newcommand{\makeEpigraph}[2]{
-\clearpage
-\begin{center}
-\vspace*{\fill}
-#1\\
-\textit{#2}
-\vspace*{\fill}
-\end{center}
+    \clearpage
+    \begin{center}
+        \vspace*{\fill}
+        #1\\
+        \textit{#2}
+        \vspace*{\fill}
+    \end{center}
 }
 
 % ------------------ Dedication ------------------
 \newcommand{\makeDedication}[1]{
-\clearpage
-\begin{center}
-\vspace*{\fill}
-#1\\
-\vspace*{\fill}
-\end{center}
+    \clearpage
+    \begin{center}
+        \vspace*{\fill}
+        #1\\
+        \vspace*{\fill}
+    \end{center}
 }
 
 % ------------------ Acknowledgments environment/formatting ------------------
@@ -302,8 +301,8 @@ Date approved: \@approvaldate
     \phantomsection
     \addcontentsline{toc}{chapter}{Acknowledgments}
     \begin{centering}
-    \textbf{ACKNOWLEDGMENTS}\\
-    \vspace{\baselineskip}
+        \textbf{\Large Acknowledgements}\\
+        \vspace{\baselineskip}
     \end{centering}
 }
 {
@@ -315,8 +314,8 @@ Date approved: \@approvaldate
 \renewcommand{\cftchapfont}{\bfseries}  % set title font weight
 \renewcommand{\cftchappagefont}{}  % set page number font weight
 \renewcommand{\cftchappresnum}{Chapter }
-\renewcommand{\cftchapaftersnum}{:}
-\renewcommand{\cftchapnumwidth}{5em}
+\renewcommand{\cftchapaftersnum}{: }
+\renewcommand{\cftchapnumwidth}{6em}
 \renewcommand{\cftchapafterpnum}{\vskip\baselineskip} % set correct spacing for entries in single space environment
 \renewcommand{\cftsecafterpnum}{\vskip\baselineskip}  % set correct spacing for entries in single space environment
 \renewcommand{\cftsubsecafterpnum}{\vskip\baselineskip} % set correct spacing for entries in single space environment
@@ -326,41 +325,41 @@ Date approved: \@approvaldate
     \currentpdfbookmark{Table of Contents}{TOC}
     \renewcommand\contentsname{Table of Contents}
     \begin{singlespace}
-    \tableofcontents
+        \tableofcontents
     \end{singlespace}
     \clearpage
 }
 
 % ------------------ List of Tables ------------------
 \newcommand{\makeListOfTables}{
-\phantomsection
-\addcontentsline{toc}{chapter}{List of Tables}
-\begin{singlespace}
-\setlength\cftbeforetabskip{\baselineskip}  % manually set spacing between entries
-\listoftables
-\end{singlespace}
-\clearpage
+    \phantomsection
+    \addcontentsline{toc}{chapter}{List of Tables}
+    \begin{singlespace}
+        \setlength\cftbeforetabskip{\baselineskip}  % manually set spacing between entries
+        \listoftables
+    \end{singlespace}
+    \clearpage
 }
 
 % ------------------ List of Figures ------------------
 \newcommand{\makeListOfFigures}{
-\phantomsection
-\addcontentsline{toc}{chapter}{List of Figures}
-\begin{singlespace}
-\setlength\cftbeforefigskip{\baselineskip}  % manually set spacing between entries
-\listoffigures
-\end{singlespace}
-\clearpage
+    \phantomsection
+    \addcontentsline{toc}{chapter}{List of Figures}
+    \begin{singlespace}
+        \setlength\cftbeforefigskip{\baselineskip}  % manually set spacing between entries
+        \listoffigures
+    \end{singlespace}
+    \clearpage
 }
 
 % ------------------ List of Acronyms ------------------
 \newcommand{\makeListOfAcronyms}{
-\phantomsection
-\singlespacing
-\addcontentsline{toc}{chapter}{List of Acronyms}
-\printacronyms[nonumberlist,title={List of Acronyms}]
-\clearpage
-\doublespacing
+    \phantomsection
+    \singlespacing
+    \addcontentsline{toc}{chapter}{List of Acronyms}
+    \printacronyms[nonumberlist,title={List of Acronyms}]
+    \clearpage
+    \doublespacing
 }
 
 % ------------------ abstract environment definition ------------------
@@ -369,18 +368,20 @@ Date approved: \@approvaldate
     \phantomsection
     \addcontentsline{toc}{chapter}{Abstract}
     \begin{centering}
-    ABSTRACT OF THE \MakeUppercase{\thesisType}\\
+        {\bf {\large ABSTRACT OF THE \MakeUppercase{\thesisType}}\\
 
-\vspace{\baselineskip}
-\thesisTitle\\
-\vspace{\baselineskip}
-by \MakeUppercase{\yourName}\\
-\vspace{\baselineskip}
-{\thesisType} Director: {\yourDirector}\\
-\vspace{2\baselineskip}
+        \vspace{\baselineskip}
+        {\LARGE \thesisTitle}\\
+        \vspace{\baselineskip}
+        {\large By \MakeUppercase{\yourName}}\\
+        \vspace{1.5\baselineskip}
+        {\large
+        {\thesisType} Director: \\
+        {\yourDirector}}}\\
+        \vspace{2\baselineskip}
     \end{centering}
 }{
-\clearpage
+    \clearpage
 }
 
 % ------------------ appendix environment definition ------------------
@@ -399,24 +400,24 @@ by \MakeUppercase{\yourName}\\
         \null\vfil
         \markboth{}{}%
         {\centering
-        \interlinepenalty \@M
-        \normalfont
-        \Huge \bfseries \appendixpagename\par}%
+            \interlinepenalty \@M
+            \normalfont
+            \Huge \bfseries \appendixpagename\par}%
         \if@dotoc@pp
-        \fi
+\fi
     }
     \bookmarksetupnext{level=part}
     \begin{appendices}
-    \addtocontents{toc}{\protect\renewcommand{\protect\cftsecpresnum}{\appendixname\space}}
-    \addtocontents{toc}{\protect\renewcommand{\protect\cftsecnumwidth}{5.75em}}
-    \addtocontents{toc}{\protect\renewcommand{\protect\cftsecaftersnum}{:}}
-    \addtocontents{toc}{%
-    \begingroup
-        \let\protect\l@chapter\protect\l@section
-        \let\protect\l@section\protect\l@subsection
-    }
-}{
-    \addtocontents{toc}{\endgroup}
+        \addtocontents{toc}{\protect\renewcommand{\protect\cftsecpresnum}{\appendixname\space}}
+        \addtocontents{toc}{\protect\renewcommand{\protect\cftsecnumwidth}{5.75em}}
+        \addtocontents{toc}{\protect\renewcommand{\protect\cftsecaftersnum}{:}}
+        \addtocontents{toc}{%
+            \begingroup
+            \let\protect\l@chapter\protect\l@section
+            \let\protect\l@section\protect\l@subsection
+        }
+        }{
+        \addtocontents{toc}{\endgroup}
     \end{appendices}
 }
 \makeatother
@@ -435,7 +436,7 @@ by \MakeUppercase{\yourName}\\
 \AtEveryBibitem{\clearfield{url}}
 \AtEveryBibitem{\clearlist{url}}
 \AtEveryBibitem{%
-\ifentrytype{online}{}
+    \ifentrytype{online}{}
     {\clearfield{urlyear}\clearfield{urlmonth}\clearfield{urlday}}}
 
 \newcommand{\makeBibliography}{
@@ -444,11 +445,11 @@ by \MakeUppercase{\yourName}\\
     \phantomsection
     \addcontentsline{toc}{chapter}{References}
     \begin{centering}
-    \textbf{REFERENCES}\\
+        \textbf{REFERENCES}\\
     \end{centering}
     \begin{singlespace}  % use single-line spacing for multi-line text within a single reference
-    \setlength\bibitemsep{\baselineskip}  % manually set separation between items in bibliography to double space
-    \printbibliography[heading=none]
+        \setlength\bibitemsep{\baselineskip}  % manually set separation between items in bibliography to double space
+        \printbibliography[heading=none]
     \end{singlespace}
 }
 
