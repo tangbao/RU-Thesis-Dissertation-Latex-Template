@@ -20,7 +20,7 @@ You can find the latest stable version of this template from [releases](https://
 
 To start on Overleaf, please log into your account first, then click New Project - Upload Project - Select/drag a .zip file, and upload the .zip file you downloaded, to start your excellent work. The main LaTeX file is `thesis.tex`.
 
-The latest dev version of this template is available by cloning this repo or clicking Code - Download ZIP on GitHub. Make sure the tex files are put under the root of your work directory (i.e., not in a subfolder), otherwise there might be some issues (e.g., List of Abbreviations page (Page vii) might be blank except the page number), see [#2](https://github.com/tangbao/RU-Thesis-Dissertation-Latex-Template/issues/2) for more information.
+The latest dev version of this template is available by cloning this repo or clicking Code - Download ZIP on GitHub. Make sure the tex files are put under the root of your work directory (i.e., not in a subfolder), otherwise there might be some issues (e.g., List of Abbreviations page (Page vii) might be blank except the page number), see also [#8](https://github.com/tangbao/RU-Thesis-Dissertation-Latex-Template/issues/8) for more information.
 
 ## Make Contributions / Report Bugs
 
