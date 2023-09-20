@@ -16,15 +16,11 @@ You can check the generated [example pdf file](RutgersDissertationTemplate.pdf) 
 
 **!!! READ THE COMMENTS CAREFULLY IN TEMPLATES !!!**
 
-You can find the latest stable version of this template from [releases](https://github.com/tangbao/RU-Thesis-Dissertation-Latex-Template/releases/). The latest dev version of this template is available by cloning this repo or clicking Code - Download ZIP on GitHub.
+You can find the latest stable version of this template from [releases](https://github.com/tangbao/RU-Thesis-Dissertation-Latex-Template/releases/). This template is tested on [Overleaf](https://overleaf.com). There might be issues if you are using local LaTex editors (see [#2](https://github.com/tangbao/RU-Thesis-Dissertation-Latex-Template/issues/2)).
 
-This template is tested on [Overleaf](https://overleaf.com). There might be issues if you are using local LaTex editors (see [#2](https://github.com/tangbao/RU-Thesis-Dissertation-Latex-Template/issues/2)).
+To start on Overleaf, please log into your account first, then click New Project - Upload Project - Select/drag a .zip file, and upload the .zip file you downloaded, to start your excellent work. The main LaTeX file is `thesis.tex`.
 
-To start on Overleaf, please log into your account first, then click New Project - Upload Project - Select/drag a .zip file, and upload the .zip file you downloaded, to start your excellent work. 
-
-To start locally, simply clone this repo or extract the .zip file you get, and use your LaTeX editor to start the project.
-
-The main LaTeX file is `thesis.tex`.
+The latest dev version of this template is available by cloning this repo or clicking Code - Download ZIP on GitHub. Make sure the tex files are put under the root of your work directory (i.e., not in a subfolder), otherwise there might be some issues (e.g., List of Abbreviations page (Page vii) might be blank except the page number), see [#2](https://github.com/tangbao/RU-Thesis-Dissertation-Latex-Template/issues/2) for more information.
 
 ## Make Contributions / Report Bugs
 
