@@ -121,7 +121,7 @@
       {0pt}{0pt}{30pt}	% controls vertical margins on title
     \titleformat{\section}{\normalfont\bfseries}{\thesection}{1em}{##1}
     \titleformat{\subsection}{\normalfont}{\uline{\thesubsection}}{0em}{\uline{\hspace{1em}##1}}
-    \titleformat{\subsubsection}{\normalfont\itshape}{\thesubsection}{1em}{##1}
+    \titleformat{\subsubsection}{\normalfont\itshape}{\thesubsubsection}{1em}{##1}
 }%
 {
     \clearpage
@@ -330,6 +330,11 @@ Date approved: \@approvaldate
     \end{singlespace}
     \clearpage
 }
+
+% ------------------ Set counter to the level of x.x.x.x in TOC and headings ------------------
+% See https://tex.stackexchange.com/a/186982
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
 
 % ------------------ List of Tables ------------------
 \newcommand{\makeListOfTables}{
