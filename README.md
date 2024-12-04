@@ -16,7 +16,7 @@ You can check the generated [example pdf file](RutgersDissertationTemplate.pdf) 
 
 **!!! READ THE COMMENTS CAREFULLY IN TEMPLATES !!!**
 
-You can find the latest stable version of this template from [releases](https://github.com/tangbao/RU-Thesis-Dissertation-Latex-Template/releases/). This template is tested on [Overleaf](https://overleaf.com). There might be issues if you are using local LaTex editors (see [#2](https://github.com/tangbao/RU-Thesis-Dissertation-Latex-Template/issues/2)).
+You can find the latest stable version of this template from [releases](https://github.com/tangbao/RU-Thesis-Dissertation-Latex-Template/releases/). This template is tested on [Overleaf](https://overleaf.com). There might be issues if you are using local LaTex editors or GitHub Actions (see [#2](https://github.com/tangbao/RU-Thesis-Dissertation-Latex-Template/issues/2) and [#15](https://github.com/tangbao/RU-Thesis-Dissertation-Latex-Template/pull/15)).
 
 To start on Overleaf, please log into your account first, then click New Project - Upload Project - Select/drag a .zip file, and upload the .zip file you downloaded, to start your excellent work. The main LaTeX file is `thesis.tex`.
 
