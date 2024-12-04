@@ -1,0 +1,30 @@
+name: Build LaTeX document
+on:
+  push:
+  pull_request:
+jobs:
+  build_latex:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v4
+      - uses: actions/cache@v4
+        name: Tectonic Cache
+        with:
+          path: ~/.cache/Tectonic
+          key: ${{ runner.os }}-tectonic-${{ hashFiles('**/*.tex') }}
+          restore-keys: |
+            ${{ runner.os }}-tectonic-
+      - name: Set up tectonic
+        uses: wtfjoke/setup-tectonic@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          tectonic-version: 0.15.0
+          biber-version: 2.17
+      - name: Compile LaTeX document
+        run: tectonic thesis.tex
+      - name: Upload PDF file
+        uses: actions/upload-artifact@v4
+        with:
+          name: PDF
+          path: thesis.pdf
