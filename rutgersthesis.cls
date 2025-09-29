@@ -381,7 +381,8 @@ Date approved: \@approvaldate
 \vspace{\baselineskip}
 by \MakeUppercase{\yourName}\\
 \vspace{\baselineskip}
-{\thesisType} Director: {\yourDirector}\\
+{\thesisType} Director:\\
+{\yourDirector}\\
 \vspace{2\baselineskip}
     \end{centering}
 }{
