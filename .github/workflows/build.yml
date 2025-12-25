@@ -22,7 +22,10 @@ jobs:
           tectonic-version: 0.15.0
           biber-version: 2.17
       - name: Compile LaTeX document
-        run: tectonic thesis.tex
+        run: |
+          tectonic -k thesis.tex
+          makeglossaries thesis
+          tectonic -k thesis.tex
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
         with:
